@@ -1,0 +1,12 @@
+<h1>Jhon Quitian</h1>
+<form [formGroup]="formSearch" (ngSubmit)="onSearch()">
+    <input type="text" formControlName="search">
+    <button>Buscar</button>
+</form>
+<article class="items" *ngFor="let item of arrItems">
+    <div class="item" [routerLink]="['/info-item', item.id]">
+        <h1>{{item.title}}</h1>
+        <p>Price: {{item.price}}</p>
+        <img [src]="item.thumbnail" [alt]="item.title">
+    </div>
+</article>
