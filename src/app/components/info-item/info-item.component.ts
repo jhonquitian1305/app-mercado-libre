@@ -27,7 +27,6 @@ export class InfoItemComponent implements OnInit {
       {
         next: (res) => {
           this.item = res;
-          console.log(this.item);
         }
       }
     )

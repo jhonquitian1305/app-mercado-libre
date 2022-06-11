@@ -29,8 +29,7 @@ export class ItemsComponent implements OnInit {
     console.log(search.search)
     this.itemsService.getItems(search.search)
       .then(async response => {
-        this.arrItems = await response['results']
-        console.log(this.arrItems);
+        this.arrItems = await response['results'];
       })
   }
 
